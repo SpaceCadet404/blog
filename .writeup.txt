@@ -1,0 +1,49 @@
+Ongoing notes
+
+Today I worked on laying the groundwork for this application.
+It's a website that will function as a blog.
+Here's roughly how I want it to work:
+
+  1. Homepage
+    This page has short snippets of each blog post. You can scroll down and
+    see the most recent blog posts title, publication date, and etc.
+    On the top (or left) will be a navigation bar.
+
+  2. Individual blog posts
+    These will be longer, article style posts. They will be able to embed
+    photos, videos, and other media on the sides, much like a news site or
+    conventional blog.
+
+Very simple to start.
+
+I've decided to use Flask to construct the site. So far, I have some good
+foundations in place.
+
+  - App can hello world and show some test blog posts
+  - App renders site by URL. These are programmed in app/routes.py
+  - App renders using index.html, which is an extention of base.html
+  - Content is currently hard-coded into routes.py. This will need to be placed
+    into a db in the near future.
+
+My next steps:
+
+  - Ease of dev use:
+      Find way to automate environment variables
+      Find way to install all needed pip packages easily from list
+
+  - Implement pagination(?)
+      Basically, I want to have variable in db "slug"
+      This will be used as url
+      ```@app.route(post.slug):```
+
+  - Comments at bottom of articles
+      Will require login, possibly gravatar? (so easy to use so probably)
+
+
+Stumped List:
+
+  - Got stumped by extended index.html not displaying posts, but turns out I was
+    using {% if published %}, and should have been using {% if post.published %}
+
+
+Testing Git
