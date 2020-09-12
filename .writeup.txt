@@ -39,11 +39,15 @@ My next steps:
   - Comments at bottom of articles
       Will require login, possibly gravatar? (so easy to use so probably)
 
+  - Get post data out of routes.py. This should be in a db.
+
 
 Stumped List:
 
   - Got stumped by extended index.html not displaying posts, but turns out I was
     using {% if published %}, and should have been using {% if post.published %}
+
+  - Couldn't import models. Turns out I had misnamed the file "model.py"
 
 
 Testing Git

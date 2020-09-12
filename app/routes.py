@@ -1,10 +1,12 @@
 from app import app
 from flask import render_template
+from app import db
 
 @app.route('/')
 @app.route('/index')
-def index():
-    posts = [
+
+def landing_page():
+    posts=[
         {
             'title':'test post',
             'slug':'test_post',
@@ -18,9 +20,9 @@ def index():
             'slug':'test_post_2',
             'author':'SpaceCadet',
             'timestamp':'2020/09/06 01:00',
-            'published':False,
+            'published':True,
             'body':'This is test content! This one should NOT be visible!',
         }
     ]
 
-    return render_template('index.html', posts=posts)
+    return render_template('index.html')
